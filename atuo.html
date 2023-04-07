@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Atuo个人导航页</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="./assets/css/main.css" />
+		<link rel="stylesheet" href="./assets/css/fonts.css" >
+		<link rel="stylesheet" href="//at.alicdn.com/t/c/font_3126908_v2gtxff2upr.css">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<img src="https://q.qlogo.cn/g?b=qq&nk=3021015507&s=160" class="logo">
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h2>Atuo个人引导页</h2>
+								<p>Atuo小店永久导航地址，记得收藏保存本网站哦~</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li> <a target="_blank" href="https://atuo.site">Atuo小店</a></li> 
+                                <li> <a target="_blank" href="https://a1p.atuo.site">A1P注册</a></li> 
+                                <li> <a target="_blank" href="https://pan.atuo.site">Atuo云盘</a></li>
+                                <li> <a target="_blank" href="https://blog.atuo.site">Atuo博客</a></li> 
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+				<!-- Footer -->
+					<footer id="footer">
+					    <p class="copyright">您的IP地址是：<span id="ip"></span></p>
+	                    <p class="copyright">您的运营商信息是：<span id="addr"></span></p>
+						<div style="font-size: 0.6rem;letter-spacing: 0.2rem;opacity: 0.75;margin-bottom: 0;">
+						    <span class="nav-item">
+                                <a class="nav-link" href="https://blog.atuo.site" target="_blank">
+                                <i class="iconfont icon-blog1" style="color:#ffffff" aria-hidden="true"></i>
+                                博客 |
+                                </a>
+                            </span>
+                            <span class="nav-item">
+                                <a class="nav-link" href="mailto:3021015507@qq.com" target="_blank">
+                                <i class="iconfont icon-mail1" style="color:#ffffff" aria-hidden="true"></i>
+                                邮箱
+                                </a>
+                            </span>
+                        </div>
+	                    <p class="copyright">COPYRIGHT © 2019-2023 <a href="https://atuo.3e.pw">Atuo</a>. ALL RIGHTS RESERVED.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="//at.alicdn.com/t/c/font_3126908_v2gtxff2upr.js"></script>
+	        <script>
+	        // 请求数据
+	        (async () => {
+	            try {
+	                const response = await fetch('https://ip.fw1028.top/api.php?=&type=json');
+	                const data = await response.json();
+	                // 从JSON数据中提取IP地址和地址信息
+	                const { ip, addr } = data;
+	                // 将IP地址和地址信息展示在网页上
+	                document.getElementById('ip').textContent = ip;
+	                document.getElementById('addr').textContent = addr;
+	            } catch (error) {
+	                console.error(error);
+	            }
+	        })();
+	       </script>
+	</body>
+</html>
